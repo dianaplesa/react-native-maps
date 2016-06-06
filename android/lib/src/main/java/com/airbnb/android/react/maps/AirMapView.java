@@ -274,10 +274,8 @@ public class AirMapView extends MapView implements GoogleMap.InfoWindowAdapter,
 
     public void setShowsUserLocation(boolean showUserLocation) {
         this.showUserLocation = showUserLocation; // hold onto this for lifecycle handling
-        if (hasPermissions()) {
-            //noinspection MissingPermission
-            map.setMyLocationEnabled(showUserLocation);
-        }
+        map.setMyLocationEnabled(showUserLocation);
+        map.getUiSettings().setMyLocationButtonEnabled(false);
     }
 
     public void setHandlePanDrag(boolean handlePanDrag) {
