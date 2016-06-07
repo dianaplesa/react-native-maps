@@ -254,6 +254,7 @@ public class AirMapView
     public void setShowsUserLocation(boolean showUserLocation) {
         this.showUserLocation = showUserLocation; // hold onto this for lifecycle handling
         map.setMyLocationEnabled(showUserLocation);
+        map.getUiSettings().setMyLocationButtonEnabled(false);
     }
 
     public void addFeature(View child, int index) {
